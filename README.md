@@ -1,40 +1,13 @@
-tareas = []  # Lista para guardar las tareas
+El proyecto es sobre un prototipo de chatbot de WhatsApp que permite la orgarganización y brinda recordatorios de las tareas y/o pendientes de los estudiantes universitarios.
+Es útil ya que permite que ellos puedan tener un mejor manejo del tiempo y que no tengan el estrés de olvidar alguna tarea o de no tener tiempo para ellos mismos.
 
-def agregar_tarea():
-    nombre = input("Escribe el nombre de la tarea: ")
-    fecha = input("Escribe la fecha de entrega (ejemplo: 2025-09-30): ")
-    tareas.append({"nombre": nombre, "fecha": fecha})
-    print("Tarea registrada correctamente.\n")
+Para utilizar el código el usuario debe correr el programa y seleccionar la opción que quiera, la 1. para ingresar tareas (el usuario deberá ingresar el nombre del pendiente y la fehca de entrega) la 2. para mostrar tareas (el programa mostratá una lista de las tareas pendientes) y la 3. para enviar recordatorios (el programa le enviará un recordatorio de los pendientes al usuario).
 
-def mostrar_tareas():
-    if len(tareas) == 0:
-        print("No tienes tareas registradas.\n")
-    else:
-        print("Estas son tus tareas pendientes:")
-        for t in tareas:
-            print("- ", t["nombre"], " | Fecha:", t["fecha"])
-        print("")
+El usuario debe tener acceso a Visual Studio Code para poder utilizar la extensión de Phyton o a algún software de programación básica que pueda correr el código.
 
-def enviar_recordatorio():
-    if len(tareas) > 0:
-        print("Recordatorio: No olvides tu tarea:", tareas[0]["nombre"], 
-              "con fecha:", tareas[0]["fecha"], "\n")
-    else:
-        print("No hay tareas para recordar.\n")
+Esta parte del proyecto es únicamente un prototipo, por lo que está sujeto a cambios.
+
+El proyecto fue realizado por: Sophia Zarazúa, Andrea Recinos, Sofía Alvárez, Abril Siliezar, Isabel Pérez (Estudiantes de Algoritmos y Porgramación básica, Sección: 70)
 
 
-print("Chatbot de Recordatorios")
-print("1. Agregar tarea")
-print("2. Mostrar tareas")
-print("3. Enviar recordatorio")
 
-opcion = input("Elige una opción: ")
-
-if opcion == "1":
-    agregar_tarea()
-elif opcion == "2":
-    mostrar_tareas()
-elif opcion == "3":
-    enviar_recordatorio()
-else:
-    print("Opción no válida.\n")
